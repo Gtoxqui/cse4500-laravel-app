@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-URL::forceScheme('https');
+//URL::forceScheme('https');
 
 Route::get('/todos', function () {
     return view('todos');
