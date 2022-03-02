@@ -31,4 +31,4 @@ Route::get('/board', function () {
     return view('board');
 });
 
-//URL::forceScheme('https');
+URL::forceScheme('https');
