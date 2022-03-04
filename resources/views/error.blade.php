@@ -36,9 +36,6 @@ Meanwhile, you may <a href="/">return to dashboard</a> or try using the search f
 </div>
 
 
-
-
-
 </div>
 @stop
 
