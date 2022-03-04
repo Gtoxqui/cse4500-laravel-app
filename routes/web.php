@@ -33,6 +33,10 @@ Route::get('/events-feed', function () {
     return view('events-feed');
 });
 
+Route::fallback(function () {
+  return view(view: 'error');
+});
+
 Route::get('/db-test', function() {
     try {
         \DB::connection()->getPDO();
@@ -41,10 +45,6 @@ Route::get('/db-test', function() {
     } catch (\Exception $e) {
         echo 'None';
     }
-});
-
-Route::fallback(function () {
-  return view(view: 'error');
 });
 
 Route::get('/db-migrate', function() {
