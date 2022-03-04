@@ -29,6 +29,10 @@ Route::get('/board', function () {
     return view('board');
 });
 
+Route::get('/events-feed', function () {
+    return view('events-feed');
+});
+
 Route::get('/db-test', function() {
     try {
         \DB::connection()->getPDO();
