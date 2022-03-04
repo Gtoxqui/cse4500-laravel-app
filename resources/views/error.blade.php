@@ -23,20 +23,7 @@ Meanwhile, you may <a href="/">return to dashboard</a> or try using the search f
 <div class="input-group-append">
 <button type="submit" name="submit" class="btn btn-warning"><i class="fas fa-search"></i>
 </button>
-</div>
-</div>
 
-</form>
-</div>
-
-</div>
-   </div>
-</div>
-
-</div>
-
-
-</div>
 @stop
 
 @section('css')
