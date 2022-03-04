@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'title')
+@section('title', 'Page Not Found')
 
 @section('content_header')
     <h1>Error</h1>
