@@ -33,6 +33,9 @@ Route::get('/events-feed', function () {
     return view('events-feed');
 });
 
+use App\Http\Controllers\TodoController;
+Route::resource('/todos', TodoController::class);
+
 Route::fallback(function () {
   return view(view: 'error');
 });
