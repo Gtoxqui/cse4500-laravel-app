@@ -14,8 +14,8 @@ class CalendarController extends Controller
      */
     public function index()
     {
-        $events = Calendar::select('title','startTime AS start','endTime AS end')->get();
-        return json_encode( compact('events')['events'] );
+      $events = Calendar::select('title','startTime AS start','endTime AS end')->get();
+      return json_encode( compact('events')['events']);
     }
 
     /**
@@ -36,18 +36,16 @@ class CalendarController extends Controller
      */
     public function store(Request $request)
     {
-        //Validate input data
         $validated = $request->validate([
-            'title' => 'required',
-            'start_at' => 'required',
-            'end_at' => 'required',
+          'title' => 'required',
+          'start_at' => 'required',
+          'end_at' => 'required',
         ]);
 
-        //Calls the event model to create a new record & save the data
         $eventsfeed = Calendar::create([
-            'title' => $request->title,
-            'startTime' => date($request->start_at),
-            'endTime' => date($request->end_at),
+          'title' => $request->title,
+          'startTime' => date($request->start_at),
+          'endTime' => date($request->end_at),
         ]);
 
         return redirect('/calendar');
