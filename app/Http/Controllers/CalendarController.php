@@ -14,7 +14,7 @@ class CalendarController extends Controller
      */
     public function index()
     {
-        $events = Calendar::select('title', 'startTime AS start', 'endTime AS end')->get();
+        $events = Calendar::select('title','startTime AS start','endTime AS end')->get();
         return json_encode( compact('events')['events'] );
     }
 
@@ -62,7 +62,7 @@ class CalendarController extends Controller
     public function show($id)
     {
         $eventsfeed = Calendar::find($id);
-        return view('eventsfeed.show', compact('calendar'));
+        return view('eventsfeed.show',compact('calendar'));
     }
 
     /**
