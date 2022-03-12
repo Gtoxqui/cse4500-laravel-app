@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TodoController;
+use App\Http\Controllers\CalendarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,8 +35,9 @@ Route::get('/events-feed', function () {
     return view('events-feed');
 });
 
-use App\Http\Controllers\TodoController;
 Route::resource('/todos', TodoController::class);
+
+Route::resource ('/eventslist', CalendarController::class);
 
 Route::fallback(function () {
   return view(view: 'error');
